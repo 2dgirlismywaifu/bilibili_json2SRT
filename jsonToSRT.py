@@ -7,6 +7,7 @@ i = 1
 for doc in os.listdir():  # 遍历当前文件夹的所有文件
     if doc[-4:] == 'json':  # 若是json文件则进行处理
         name = doc[:-5]  # 提取文件名
+        file = '' # small change but it make this script can work with multi file
         # 将此处文件位置进行修改，加上utf-8是为了避免处理中文时报错
         with open(doc, encoding='utf-8') as f:
             datas = json.load(f)  # 加载文件数据
